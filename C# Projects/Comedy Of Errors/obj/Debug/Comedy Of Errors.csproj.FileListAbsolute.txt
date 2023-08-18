@@ -1,0 +1,14 @@
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\Comedy Of Errors.csproj.AssemblyReference.cache
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\Comedy Of Errors.csproj.SuggestedBindingRedirects.cache
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\Comedy_Of_Errors.Properties.Resources.resources
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\Comedy Of Errors.csproj.GenerateResource.cache
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\Comedy Of Errors.csproj.CoreCompileInputs.cache
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\bin\Debug\Comedy Of Errors.exe.config
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\bin\Debug\Comedy Of Errors.exe
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\bin\Debug\Comedy Of Errors.pdb
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\Comedy Of Errors.exe
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\Comedy Of Errors.pdb
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\Comedy_Of_Errors.ComedyOfErros_Shubhang.resources
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\bin\Debug\wal\Comedy Of Errors.resources.dll
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\Comedy_Of_Errors.ComedyOfErros_Shubhang.wal.resources
+C:\Users\shubhangvigya\source\repos\Comedy Of Errors\Comedy Of Errors\obj\Debug\wal\Comedy Of Errors.resources.dll
