@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-30T14:10:41 GMT" name="Default suite" finished-at="2024-01-30T14:21:45 GMT" duration-ms="663292">
+    <groups>
+      <group name="Regression">
+        <method signature="FilterTest.VerifyKeywordText(java.util.HashMap)[pri:0, instance:DaftIE.FilterTest@6af93788]" name="VerifyKeywordText" class="DaftIE.FilterTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2024-01-30T14:10:41 GMT" name="Default test" finished-at="2024-01-30T14:21:45 GMT" duration-ms="663292">
+      <class name="DaftIE.FilterTest">
+        <test-method signature="VerifyCounty(java.util.HashMap)[pri:0, instance:DaftIE.FilterTest@6af93788]" started-at="2024-01-30T14:10:42 GMT" name="VerifyCounty" data-provider="getData" finished-at="2024-01-30T14:13:27 GMT" duration-ms="165229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Keyword=garage, County=Dublin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCounty -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:DaftIE.FilterTest@6af93788]" started-at="2024-01-30T14:13:27 GMT" name="TearDown" finished-at="2024-01-30T14:13:27 GMT" duration-ms="529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="VerifyKeywordResult(java.util.HashMap)[pri:0, instance:DaftIE.FilterTest@6af93788]" started-at="2024-01-30T14:13:27 GMT" name="VerifyKeywordResult" data-provider="getData" finished-at="2024-01-30T14:17:02 GMT" duration-ms="214120" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Keyword=garage, County=Dublin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyKeywordResult -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:DaftIE.FilterTest@6af93788]" started-at="2024-01-30T14:17:02 GMT" name="TearDown" finished-at="2024-01-30T14:17:02 GMT" duration-ms="404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="VerifyKeywordText(java.util.HashMap)[pri:0, instance:DaftIE.FilterTest@6af93788]" started-at="2024-01-30T14:17:02 GMT" name="VerifyKeywordText" data-provider="getData" finished-at="2024-01-30T14:21:44 GMT" duration-ms="282280" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Keyword=garage, County=Dublin}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[garage not found in advert. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: garage not found in advert. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at DaftIE.FilterTest.VerifyKeywordText(FilterTest.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyKeywordText -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:DaftIE.FilterTest@6af93788]" started-at="2024-01-30T14:21:44 GMT" name="TearDown" finished-at="2024-01-30T14:21:45 GMT" duration-ms="449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- DaftIE.FilterTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
