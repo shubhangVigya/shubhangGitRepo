@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DaftIE.FilterTest">
+      <class name="daftIeTests.FilterTest">
         <methods>
           <include name="VerifyKeywordText" invocation-numbers="0"/>
           <include name="TearDown"/>
         </methods>
-      </class> <!-- DaftIE.FilterTest -->
+      </class> <!-- daftIeTests.FilterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

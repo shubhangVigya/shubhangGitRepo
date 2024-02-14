@@ -13,7 +13,7 @@ public class DataFile {
 		// inputs data as a key pair value into object "map" that can be called in @test
 		HashMap <String,String> map = new HashMap<String,String>();
 		map.put("County", "Dublin");
-		map.put("Keyword", "Garage");
+		map.put("Keyword", "garage");
 		return new Object [][] {{map}};
 	}
 

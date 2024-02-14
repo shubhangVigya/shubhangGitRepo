@@ -31,18 +31,7 @@ public class FilterTest extends BaseTest {
 
 		// Assertion to check search results for searched County
 		Assert.assertTrue(searchResults.size() > 0, "No search results found for " + input.get("County"));
-	}
-
-	// Scenario 2: Verify results for filter Keyword
-	@Test(dataProvider = "getData", dataProviderClass = DataFile.class, enabled = true)
-	public void VerifyKeywordResult(HashMap<String, String> input) throws InterruptedException {
-
-		LandingPage landingPage = initializeDriver();
-
-		BuyPage buyPage = landingPage.Search(input.get("County"));
-
-		// BuyPage buyPage = new BuyPage(driver);
-
+		
 		buyPage.filterTab();
 		buyPage.filterKeyword(input.get("Keyword"));
 		// catch all the filter result of "garage" keyword
@@ -50,32 +39,56 @@ public class FilterTest extends BaseTest {
 
 		// Assertion to check filter keyword results
 		Assert.assertTrue(filterResults.size() > 0, "No search results found for " + input.get("Keyword"));
-	}
-
-	// Scenario 3: Verify filter keyword in Advert
-	@Test(dataProvider = "getData", dataProviderClass = DataFile.class, groups = { "Regression" })
-	public void VerifyKeywordText(HashMap<String, String> input) throws InterruptedException {
-
-		LandingPage landingPage = initializeDriver();
-
-		BuyPage buyPage = landingPage.Search(input.get("County"));
-
-		// BuyPage buyPage = new BuyPage(driver);
-
-		buyPage.filterTab();
-		buyPage.filterKeyword(input.get("Keyword"));
-
 		buyPage.filterList();
 		// Click on first advert and catch Advert page
 		AdvertPage advertPage = buyPage.advert();
 
-		// AdvertPage advertPage = new AdvertPage(driver);
-		String text = advertPage.wordScan();
+		String text = advertPage.wordScan().toLowerCase();
 
 		// Assertion to check keyword in Advert
-		Assert.assertTrue(text.toLowerCase().contains(input.get("Keyword"))|| text.toUpperCase().contains(input.get("Keyword")),
-				input.get("Keyword") + " not found in advert.");
 
+		Assert.assertTrue(text.contains(input.get("Keyword")) || text.matches(".*\\b" + input.get("Keyword") + "\\b.*"),
+				input.get("Keyword") + " not found in advert.");
 	}
+
+	// Scenario 2: Verify results for filter Keyword
+//	@Test(dataProvider = "getData", dataProviderClass = DataFile.class, enabled = true)
+//	public void VerifyKeywordResult(HashMap<String, String> input) throws InterruptedException {
+//
+//		LandingPage landingPage = initializeDriver();
+//
+//		BuyPage buyPage = landingPage.Search(input.get("County"));
+//
+//		buyPage.filterTab();
+//		buyPage.filterKeyword(input.get("Keyword"));
+//		// catch all the filter result of "garage" keyword
+//		List<WebElement> filterResults = buyPage.filterList();
+//
+//		// Assertion to check filter keyword results
+//		Assert.assertTrue(filterResults.size() > 0, "No search results found for " + input.get("Keyword"));
+//	}
+
+	// Scenario 3: Verify filter keyword in Advert
+//	@Test(dataProvider = "getData", dataProviderClass = DataFile.class, groups = { "Regression" })
+//	public void VerifyKeywordText(HashMap<String, String> input) throws InterruptedException {
+//
+//		LandingPage landingPage = initializeDriver();
+//
+//		BuyPage buyPage = landingPage.Search(input.get("County"));
+//
+//		buyPage.filterTab();
+//		buyPage.filterKeyword(input.get("Keyword"));
+//
+//		buyPage.filterList();
+//		// Click on first advert and catch Advert page
+//		AdvertPage advertPage = buyPage.advert();
+//
+//		String text = advertPage.wordScan().toLowerCase();
+//
+//		// Assertion to check keyword in Advert
+//
+//		Assert.assertTrue(text.contains(input.get("Keyword")) || text.matches(".*\\b" + input.get("Keyword") + "\\b.*"),
+//				input.get("Keyword") + " not found in advert.");
+//	}
 
 }

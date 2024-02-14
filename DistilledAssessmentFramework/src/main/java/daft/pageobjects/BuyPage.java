@@ -3,6 +3,7 @@ package daft.pageobjects;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -61,10 +62,21 @@ public class BuyPage extends AbstractComponent {
 
 	}
     // Populate Keyword under Filters
+//	public void filterKeyword(String Keyword) {
+//		keyword.sendKeys(Keyword);
+//		show.click();
+//
+//	}
+	
 	public void filterKeyword(String Keyword) {
-		keyword.sendKeys(Keyword);
-		show.click();
-
+	    keyword.sendKeys(Keyword);
+	    try {
+	        show.click();
+	    } catch (StaleElementReferenceException e) {
+	        // If StaleElementReferenceException occurs, refresh the WebElement
+	        show = driver.findElement(By.xpath("//button[@class='NewButtonstyled__StyledButton-c5tcz6-4 hfRLhD']/div/span"));
+	        show.click();
+	    }
 	}
 
 	
